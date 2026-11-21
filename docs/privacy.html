@@ -10,20 +10,37 @@
 <header><a class="brand" href="index.html">VELTRA GPS</a><nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><a href="imprint.html">Imprint</a></nav></header>
 <main>
 <h1>Privacy Policy</h1>
-<p>Last updated: 17 November 2026</p>
+<p>Last updated: 20 November 2026</p>
 <h2>1. Controller</h2>
 <p>Leon Lammerich, Gotenweg 24, 53859 Niederkassel, Germany, <a href="mailto:veltragps@gmail.com">veltragps@gmail.com</a></p>
 <h2>2. The app works locally</h2>
 <p>No telemetry, no analytics, no advertising, no user account. Input from keyboard, mouse, joystick or controller is processed in memory only and is never stored or sent.</p>
 <h2>3. Data stored on your PC</h2>
-<p>Profiles and settings, log files (deleted after 14 days), the licence key (encrypted with Windows DPAPI) and, while tweaks are active, the original Windows values so they can be restored exactly. None of this leaves your PC. You can delete it in the app.</p>
-<h2>4. Purchase and licence check</h2>
-<p>Purchases are processed by Stripe as Merchant of Record (Stripe Managed Payments). Stripe processes order and payment data under its own <a href="https://stripe.com/privacy">privacy policy</a>. Licence keys are issued and checked by Keygen (keygen.sh): on activation and at most once a day, the app sends the licence key, a pseudonymous device name (a hash without user or computer name) and the activation ID. The server also sees your IP address and the time. Purpose: checking that the licence is valid (Art. 6(1)(b) GDPR). Both providers are based in the USA; transfers rely on the EU-US Data Privacy Framework or EU standard contractual clauses (Art. 45/46 GDPR).</p>
-<h2>5. Network test</h2>
-<p>Only when you click it: 20 pings each to your router, 1.1.1.1 (Cloudflare) and 8.8.8.8 (Google). No personal data is sent; those services see your IP address and the time, as with any ping.</p>
-<h2>6. This website</h2>
+<p>In the folder %APPDATA%\VELTRA-GPS:</p>
+<ul>
+<li>Profiles and settings (key mapping, deadzones, calibration).</li>
+<li>Log files for troubleshooting. Your Windows user folder is written as %USERPROFILE%. Logs are deleted automatically after 14 days.</li>
+<li>The licence: licence key and activation ID, encrypted with Windows DPAPI (readable only by your Windows user).</li>
+<li>While tweaks are active, the previous Windows values so they can be restored exactly – for "Throttle background apps", for example, process ID, name and priority of the throttled apps and the location of OneDrive. These entries are deleted when the app stops.</li>
+<li>The control center keeps a local memory (brain.json): which settings were changed and when, the hardware values last seen and the result of the last network test.</li>
+</ul>
+<p>None of this leaves your PC. You can delete it at any time in the app under "Profiles and settings → Delete all data".</p>
+<p>The maintenance pause also creates two tasks under "\DP HUB" in the Windows Task Scheduler and notes under HKEY_LOCAL_MACHINE\SOFTWARE\DP HUB which tasks and services it has paused. Both are removed when you switch "Pause maintenance tasks while playing" off. If you switch "Network throttling off" on, the previous Windows value is kept under HKEY_LOCAL_MACHINE\SOFTWARE\DP HUB\Original so it can be restored exactly.</p>
+<h2>4. Hardware display and restart into BIOS</h2>
+<p>The hardware display reads memory (speed, module name), mainboard maker, GPU setting as well as Secure Boot, TPM, boot mode, drive type and BitLocker status locally only. The values last seen and your confirmation of the hardware are stored locally in %APPDATA%\VELTRA-GPS (brain.json, settings.json, logs). This information is not sent anywhere.</p>
+<p>If you click "Restart into BIOS", VELTRA GPS runs the Windows command "shutdown /r /fw /t 30" after your confirmation and a Windows admin prompt. No BIOS settings are changed.</p>
+<h2>5. Purchase and licence check</h2>
+<p>Test versions have no purchase; you receive the licence key directly from us, and Stripe is not used.</p>
+<p>Purchases are processed by Stripe as Merchant of Record (Stripe Managed Payments). Stripe processes order and payment data under its own <a href="https://stripe.com/privacy">privacy policy</a>. Licence keys are issued and checked by Keygen (keygen.sh): on activation and at most once a day, when internet is available, the app sends to Keygen's licence API (api.keygen.sh) the licence key, a pseudonymous device fingerprint and device name (for example "PC-1A2B3C4D"; hashes that contain neither user nor computer name) and the activation ID. The server also sees your IP address and the time. Purpose: checking that the licence is valid (Art. 6(1)(b) GDPR). Both providers are based in the USA; transfers rely on the EU-US Data Privacy Framework or EU standard contractual clauses (Art. 45/46 GDPR).</p>
+<h2>6. Network test</h2>
+<p>Only when you click "Test network": 20 pings each to your router, 1.1.1.1 (Cloudflare) and 8.8.8.8 (Google). No data about you is sent; those services see your IP address and the time, as with any ping.</p>
+<h2>7. Installation through the Microsoft Store</h2>
+<p>If you get the app from the Microsoft Store, Microsoft handles download, installation and updates under its own responsibility; Microsoft's privacy statement applies.</p>
+<h2>8. Update check (only when switched on)</h2>
+<p>The app can fetch a public file with the latest version number at start. No licence or device data is sent; the server only sees your IP address and the time. You can switch this off in the app.</p>
+<h2>9. This website</h2>
 <p>Hosted on GitHub Pages (GitHub Inc., USA). GitHub may log your IP address for security. This site uses no cookies and no tracking.</p>
-<h2>7. Your rights</h2>
+<h2>10. Your rights</h2>
 <p>You have the right to access, rectification, erasure, restriction, data portability and objection, and to complain to a data protection authority. Contact us at the address above.</p>
 <div class="lang"><p>Die vollständigen Datenschutzhinweise auf Deutsch stehen in der App unter „Rechtliches“.</p></div>
 </main>
